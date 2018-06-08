@@ -1,15 +1,12 @@
 import javax.swing.JFrame;
 
-import Tela.TelaInicial;
-
+import Tela.Inicio;
 
 public class Forca {
 
 	public void rodarPrograma() {
-		TelaInicial ti = new TelaInicial();
-		ti.setLayout(null);
-		ti.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		ti.setSize(600, 600);
+		Inicio tela1 = new Inicio();
+		tela1.Inicio();
 		
 	}
 
