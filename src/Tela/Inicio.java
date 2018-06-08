@@ -1,5 +1,8 @@
 package Tela;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,7 +16,7 @@ public class Inicio {
 	private JPanel panelBotoes;
 	
 	public void Inicio(){
-		inicio = new JFrame("O MELHOR JOGO DE FOCAR");
+		inicio = new JFrame("O MELHOR JOGO DE FORCA");
 		inicio.setLayout(null);
 		inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		inicio.setSize(500,400);
@@ -55,6 +58,12 @@ public class Inicio {
 		
 		sair = new JButton("Sair");
 		sair.setBounds(45, 170, 200, 30);
+		sair.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				inicio.dispose();
+			}
+		});
 		
 		panel.add(comecarCadastrado);
 		panel.add(comecar);
