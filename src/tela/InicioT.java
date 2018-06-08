@@ -1,4 +1,4 @@
-package Tela;
+package tela;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,14 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Inicio {
+public class InicioT extends JFrame {
 	
 	private JFrame inicio;
 	private JLabel bemvindo;
 	private JButton comecar, comecarCadastrado, cadastrar, sair;
 	private JPanel panelBotoes;
 	
-	public void Inicio(){
+	public InicioT() {
 		inicio = new JFrame("O MELHOR JOGO DE FORCA");
 		inicio.setLayout(null);
 		inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,10 +75,5 @@ public class Inicio {
 		return panel;
 		
 	}
-	
-	public void run(){
-		Inicio();
-	}
-	
 }
 
