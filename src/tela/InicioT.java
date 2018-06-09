@@ -8,28 +8,27 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class InicioT extends JFrame {
+import controle.InicioC;
+
+public class InicioT {
 	
-	private JFrame inicio;
+	InicioC cntInicio;
+	
+	private JPanel inicio;
 	private JLabel bemvindo;
 	private JButton comecar, comecarCadastrado, cadastrar, sair;
 	private JPanel panelBotoes;
 	
-	public InicioT() {
-		inicio = new JFrame("O MELHOR JOGO DE FORCA");
-		inicio.setLayout(null);
-		inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		inicio.setSize(500,400);
-		inicio.setLocationRelativeTo(null);
-		inicio.setResizable(false);
+	public InicioT(InicioC cntInicio) {
+		
+		this.cntInicio = cntInicio;
+		inicio = new JPanel(null);
 		
 		bemvindo = criaLabel();
 		inicio.add(bemvindo);
 		
 		panelBotoes = criaBotoes();
 		inicio.add(panelBotoes);
-		
-		inicio.setVisible(true);
 		
 	}
 	
@@ -61,7 +60,7 @@ public class InicioT extends JFrame {
 		sair.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				inicio.dispose();
+				cntInicio.sair();
 			}
 		});
 		
@@ -70,10 +69,12 @@ public class InicioT extends JFrame {
 		panel.add(cadastrar);
 		panel.add(sair);
 		
-
-		
 		return panel;
 		
+	}
+	
+	public JPanel criaTela() {
+		return inicio;
 	}
 }
 
