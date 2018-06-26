@@ -107,7 +107,7 @@ public class CadastroT {
 		labelConfSenha.setBounds(50, 260, 100, 30);
 		telaCadastro.add(labelConfSenha);
 		
-		erroSenhasDiferentes = new JLabel("Senhas diferentes!");
+		erroSenhasDiferentes = new JLabel("ERRO: Senhas diferentes!");
 		erroSenhasDiferentes.setBounds(160, 240, 300, 20);
 		erroSenhasDiferentes.setForeground(Color.RED);
 		erroSenhasDiferentes.setVisible(false);

@@ -32,21 +32,29 @@ public class CadastroC {
 		System.out.println("Senha: " + senha);
 		System.out.println("Conf: " + confSenha);
 		
+		if (diferente(senha, confSenha)) {
+			JPanel proxTela = configuraTelaSenhasDiferentes();
+			forca.getJanela().setContentPane(proxTela);
+		} else {
+			// TODO salvar usuario
+			voltar();
+		}
+		
+		diferente(senha, confSenha);
+	}
+
+	private boolean diferente(String senha, String confSenha) {
 		if (senha != null) {
 			if (senha.equals(confSenha)) {
-				// TODO salvar usuario
-				voltar();
+				return true;
 			} else {
-				JPanel proxTela = configuraTelaSenhasDiferentes();
-				forca.getJanela().setContentPane(proxTela);
+				return false;
 			}
 		} else {
 			if (confSenha == null) {
-				//TODO salvar usuario
-				voltar();
+				return true;
 			} else {
-				JPanel proxTela = configuraTelaSenhasDiferentes();
-				forca.getJanela().setContentPane(proxTela);
+				return false;
 			}
 		}
 	}
