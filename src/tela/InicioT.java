@@ -91,5 +91,70 @@ public class InicioT {
 	public JPanel criaTela() {
 		return telaInicio;
 	}
+
+	public InicioC getCntInicio() {
+		return cntInicio;
+	}
+
+	public void setCntInicio(InicioC cntInicio) {
+		this.cntInicio = cntInicio;
+	}
+
+	public JPanel getTelaInicio() {
+		return telaInicio;
+	}
+
+	public void setTelaInicio(JPanel telaInicio) {
+		this.telaInicio = telaInicio;
+	}
+
+	public JLabel getBemvindo() {
+		return bemvindo;
+	}
+
+	public void setBemvindo(JLabel bemvindo) {
+		this.bemvindo = bemvindo;
+	}
+
+	public JButton getIniciar() {
+		return iniciar;
+	}
+
+	public void setIniciar(JButton iniciar) {
+		this.iniciar = iniciar;
+	}
+
+	public JButton getIniciarCadastrado() {
+		return iniciarCadastrado;
+	}
+
+	public void setIniciarCadastrado(JButton iniciarCadastrado) {
+		this.iniciarCadastrado = iniciarCadastrado;
+	}
+
+	public JButton getCadastrar() {
+		return cadastrar;
+	}
+
+	public void setCadastrar(JButton cadastrar) {
+		this.cadastrar = cadastrar;
+	}
+
+	public JButton getSair() {
+		return sair;
+	}
+
+	public void setSair(JButton sair) {
+		this.sair = sair;
+	}
+
+	public JPanel getPanelBotoes() {
+		return panelBotoes;
+	}
+
+	public void setPanelBotoes(JPanel panelBotoes) {
+		this.panelBotoes = panelBotoes;
+	}
+	
 }
 

@@ -108,4 +108,131 @@ public class CadastroT {
 		return telaCadastro;
 	}
 
+	public JPanel getTelaCadastro() {
+		return telaCadastro;
+	}
+
+	public void setTelaCadastro(JPanel telaCadastro) {
+		this.telaCadastro = telaCadastro;
+	}
+
+	public JLabel getBoasVindas() {
+		return boasVindas;
+	}
+
+	public void setBoasVindas(JLabel boasVindas) {
+		this.boasVindas = boasVindas;
+	}
+
+	public JLabel getLabelNome() {
+		return labelNome;
+	}
+
+	public void setLabelNome(JLabel labelNome) {
+		this.labelNome = labelNome;
+	}
+
+	public JLabel getLabelCPF() {
+		return labelCPF;
+	}
+
+	public void setLabelCPF(JLabel labelCPF) {
+		this.labelCPF = labelCPF;
+	}
+
+	public JLabel getLabelEmail() {
+		return labelEmail;
+	}
+
+	public void setLabelEmail(JLabel labelEmail) {
+		this.labelEmail = labelEmail;
+	}
+
+	public JLabel getLabelSenha() {
+		return labelSenha;
+	}
+
+	public void setLabelSenha(JLabel labelSenha) {
+		this.labelSenha = labelSenha;
+	}
+
+	public JLabel getLabelConfSenha() {
+		return labelConfSenha;
+	}
+
+	public void setLabelConfSenha(JLabel labelConfSenha) {
+		this.labelConfSenha = labelConfSenha;
+	}
+
+	public JButton getCadastrar() {
+		return cadastrar;
+	}
+
+	public void setCadastrar(JButton cadastrar) {
+		this.cadastrar = cadastrar;
+	}
+
+	public JButton getVoltar() {
+		return voltar;
+	}
+
+	public void setVoltar(JButton voltar) {
+		this.voltar = voltar;
+	}
+
+	public JTextField getNome() {
+		return nome;
+	}
+
+	public void setNome(JTextField nome) {
+		this.nome = nome;
+	}
+
+	public JTextField getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(JTextField cpf) {
+		this.cpf = cpf;
+	}
+
+	public JTextField getEmail() {
+		return email;
+	}
+
+	public void setEmail(JTextField email) {
+		this.email = email;
+	}
+
+	public JTextField getSenha() {
+		return senha;
+	}
+
+	public void setSenha(JTextField senha) {
+		this.senha = senha;
+	}
+
+	public JTextField getConfSenha() {
+		return confSenha;
+	}
+
+	public void setConfSenha(JTextField confSenha) {
+		this.confSenha = confSenha;
+	}
+
+	public JPanel getPanelBotoes() {
+		return panelBotoes;
+	}
+
+	public void setPanelBotoes(JPanel panelBotoes) {
+		this.panelBotoes = panelBotoes;
+	}
+
+	public CadastroC getCntCadastro() {
+		return cntCadastro;
+	}
+
+	public void setCntCadastro(CadastroC cntCadastro) {
+		this.cntCadastro = cntCadastro;
+	}
 }

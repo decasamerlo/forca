@@ -72,6 +72,62 @@ public class JogoT {
 		return telaJogo;
 	}
 
+	public JogoC getCntJogo() {
+		return cntJogo;
+	}
+
+	public void setCntJogo(JogoC cntJogo) {
+		this.cntJogo = cntJogo;
+	}
+
+	public JPanel getTelaJogo() {
+		return telaJogo;
+	}
+
+	public void setTelaJogo(JPanel telaJogo) {
+		this.telaJogo = telaJogo;
+	}
+
+	public JLabel getImagemForca() {
+		return imagemForca;
+	}
+
+	public void setImagemForca(JLabel imagemForca) {
+		this.imagemForca = imagemForca;
+	}
+
+	public JLabel getDicas() {
+		return dicas;
+	}
+
+	public void setDicas(JLabel dicas) {
+		this.dicas = dicas;
+	}
+
+	public ImageIcon getIcone() {
+		return icone;
+	}
+
+	public void setIcone(ImageIcon icone) {
+		this.icone = icone;
+	}
+
+	public PalavrasForca getPalavras() {
+		return palavras;
+	}
+
+	public void setPalavras(PalavrasForca palavras) {
+		this.palavras = palavras;
+	}
+
+	public JTextField[] getA() {
+		return a;
+	}
+
+	public void setA(JTextField[] a) {
+		this.a = a;
+	}
+	
 	// TODO Adicionar lógica de conferência de letra a letra
 	
 }

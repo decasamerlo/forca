@@ -83,4 +83,76 @@ public class LoginT {
 		return telaLogin;
 	}
 
+	public JPanel getTelaLogin() {
+		return telaLogin;
+	}
+
+	public void setTelaLogin(JPanel telaLogin) {
+		this.telaLogin = telaLogin;
+	}
+
+	public JLabel getLabelLogin() {
+		return labelLogin;
+	}
+
+	public void setLabelLogin(JLabel labelLogin) {
+		this.labelLogin = labelLogin;
+	}
+
+	public JLabel getLabelSenha() {
+		return labelSenha;
+	}
+
+	public void setLabelSenha(JLabel labelSenha) {
+		this.labelSenha = labelSenha;
+	}
+
+	public JButton getLogar() {
+		return logar;
+	}
+
+	public void setLogar(JButton logar) {
+		this.logar = logar;
+	}
+
+	public JButton getVoltar() {
+		return voltar;
+	}
+
+	public void setVoltar(JButton voltar) {
+		this.voltar = voltar;
+	}
+
+	public JTextField getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(JTextField cpf) {
+		this.cpf = cpf;
+	}
+
+	public JTextField getSenha() {
+		return senha;
+	}
+
+	public void setSenha(JTextField senha) {
+		this.senha = senha;
+	}
+
+	public JPanel getPanelBotoes() {
+		return panelBotoes;
+	}
+
+	public void setPanelBotoes(JPanel panelBotoes) {
+		this.panelBotoes = panelBotoes;
+	}
+
+	public LoginC getCntLogin() {
+		return cntLogin;
+	}
+
+	public void setCntLogin(LoginC cntLogin) {
+		this.cntLogin = cntLogin;
+	}
+	
 }
