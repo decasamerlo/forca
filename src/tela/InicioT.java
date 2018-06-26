@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -14,21 +13,21 @@ public class InicioT {
 	
 	InicioC cntInicio;
 	
-	private JPanel inicio;
+	private JPanel tela;
 	private JLabel bemvindo;
-	private JButton comecar, comecarCadastrado, cadastrar, sair;
+	private JButton iniciar, iniciarCadastrado, cadastrar, sair;
 	private JPanel panelBotoes;
 	
 	public InicioT(InicioC cntInicio) {
 		
 		this.cntInicio = cntInicio;
-		inicio = new JPanel(null);
+		tela = new JPanel(null);
 		
 		bemvindo = criaLabel();
-		inicio.add(bemvindo);
+		tela.add(bemvindo);
 		
 		panelBotoes = criaBotoes();
-		inicio.add(panelBotoes);
+		tela.add(panelBotoes);
 		
 	}
 	
@@ -46,26 +45,40 @@ public class InicioT {
 		panel.setBounds(100, 85, 300, 300);
 		
 		//adicionando botões
-		comecarCadastrado = new JButton("Iniciar");
-		comecarCadastrado.setBounds(45, 20, 200, 30);
+		iniciarCadastrado = new JButton("Iniciar");
+		iniciarCadastrado.setBounds(45, 20, 200, 30);
+		iniciarCadastrado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntInicio.iniciarCadastrado();
+			}
+		});
 		
-		comecar = new JButton("Iniciar sem cadastro");
-		comecar.setBounds(45, 70, 200, 30);
+		iniciar = new JButton("Iniciar sem cadastro");
+		iniciar.setBounds(45, 70, 200, 30);
+		iniciar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntInicio.iniciar();
+			}
+		});
 		
 		cadastrar = new JButton("Cadastra-se");
 		cadastrar.setBounds(45, 120, 200, 30);
+		cadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntInicio.cadastrar();
+			}
+		});
 		
 		sair = new JButton("Sair");
 		sair.setBounds(45, 170, 200, 30);
 		sair.addActionListener(new ActionListener() {
-			
 			public void actionPerformed(ActionEvent e) {
 				cntInicio.sair();
 			}
 		});
 		
-		panel.add(comecarCadastrado);
-		panel.add(comecar);
+		panel.add(iniciarCadastrado);
+		panel.add(iniciar);
 		panel.add(cadastrar);
 		panel.add(sair);
 		
@@ -74,7 +87,7 @@ public class InicioT {
 	}
 	
 	public JPanel criaTela() {
-		return inicio;
+		return tela;
 	}
 }
 

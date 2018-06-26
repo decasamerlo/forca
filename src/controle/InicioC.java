@@ -7,11 +7,11 @@ import tela.InicioT;
 
 public class InicioC {
 	
-	private Forca f;
+	private Forca forca;
 	private InicioT tela;
 	
 	public InicioC(Forca f) {
-		this.f = f;
+		this.forca = f;
 		tela = new InicioT(this);
 	}
 	
@@ -20,7 +20,23 @@ public class InicioC {
 	}
 	
 	public void sair() {
-		f.getJanela().dispose();
+		forca.getJanela().dispose();
+	}
+
+	public void cadastrar() {
+		JPanel proxTela = forca.getCntCadastro().configuraTela();
+		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
+		forca.getJanela().setContentPane(forca.getCntCadastro().configuraTela());
+	}
+
+	public void iniciar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void iniciarCadastrado() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
