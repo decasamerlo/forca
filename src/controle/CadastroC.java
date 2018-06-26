@@ -21,4 +21,15 @@ public class CadastroC {
 		return tela.criaTela();
 	}
 
+	public void cadastrarUsuario() {
+		// TODO buscar informações na tela e salvar
+		voltar();
+	}
+
+	public void voltar() {
+		JPanel proxTela = forca.getCntInicio().configuraTela();
+		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
+		forca.getJanela().setContentPane(proxTela);
+	}
+
 }

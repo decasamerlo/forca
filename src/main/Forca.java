@@ -30,16 +30,20 @@ public class Forca {
 		usuarioLogado = null;
 	}
 
-	public void iniciarPrograma() {
-		getJanela().setContentPane(cntInicio.configuraTela());
-	}
-
 	public JFrame getJanela() {
 		return janela;
 	}
 
 	public void setJanela(JFrame janela) {
 		this.janela = janela;
+	}
+	
+	public Usuario getUsuarioLogado() {
+		return usuarioLogado;
+	}
+
+	public void setUsuarioLogado(Usuario randomUser) {
+		this.usuarioLogado = randomUser;
 	}
 
 	public InicioC getCntInicio() {
@@ -58,12 +62,8 @@ public class Forca {
 		return cntJogo ;
 	}
 	
-	public Usuario getUsuarioLogado() {
-		return usuarioLogado;
-	}
-
-	public void setUsuarioLogado(Usuario randomUser) {
-		this.usuarioLogado = randomUser;
+	public void iniciarPrograma() {
+		getJanela().setContentPane(cntInicio.configuraTela());
 	}
 
 }

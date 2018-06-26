@@ -1,5 +1,8 @@
 package tela;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -81,9 +84,19 @@ public class CadastroT {
 		// adicionando os botoes
 		cadastrar = new JButton("Cadastre");
 		cadastrar.setBounds(45, 250, 100, 30);
+		cadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntCadastro.cadastrarUsuario();
+			}
+		});
 
 		voltar = new JButton("Voltar");
 		voltar.setBounds(165, 250, 100, 30);
+		voltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntCadastro.voltar();
+			}
+		});
 
 		panel.add(cadastrar);
 		panel.add(voltar);
