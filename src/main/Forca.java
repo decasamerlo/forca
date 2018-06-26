@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 import controle.CadastroC;
 import controle.InicioC;
+import controle.JogoC;
 import controle.LoginC;
 import modelo.Usuario;
 
@@ -15,6 +16,7 @@ public class Forca {
 	private InicioC cntInicio = new InicioC(this);
 	private CadastroC cntCadastro = new CadastroC(this);
 	private LoginC cntLogin = new LoginC(this);
+	private JogoC cntJogo = new JogoC(this);
 
 	public Forca() {
 		setJanela(new JFrame("O MELHOR JOGO DE FORCA"));
@@ -50,6 +52,18 @@ public class Forca {
 
 	public LoginC getCntLogin() {
 		return cntLogin;
+	}
+
+	public JogoC getCntJogo() {
+		return cntJogo ;
+	}
+	
+	public Usuario getUsuarioLogado() {
+		return usuarioLogado;
+	}
+
+	public void setUsuarioLogado(Usuario randomUser) {
+		this.usuarioLogado = randomUser;
 	}
 
 }

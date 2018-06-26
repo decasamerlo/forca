@@ -4,6 +4,8 @@ import tela.JogoT;
 
 import java.awt.Container;
 
+import javax.swing.JPanel;
+
 import main.Forca;
 
 public class JogoC {
@@ -13,10 +15,11 @@ public class JogoC {
 	
 	public JogoC(Forca f) {
 		this.f = f;
+		tela = new JogoT(this);
 	}
 
-	public Container configuraTela() {
-		return null;
+	public JPanel configuraTela() {
+		return tela.criaTela();
 	}
 	
 }

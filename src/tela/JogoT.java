@@ -14,7 +14,7 @@ import controle.JogoC;
 public class JogoT {
 
 	private JogoC cntJogo;
-	private JPanel jogo;
+	private JPanel telaJogo;
 	private JLabel imagemForca, dicas; 
 	private ImageIcon icone;
 	private PalavrasForca palavras;
@@ -23,12 +23,12 @@ public class JogoT {
 	public JogoT(JogoC cntJogo) {
 		
 		this.cntJogo = cntJogo;
-		jogo = new JPanel(null);
+		telaJogo = new JPanel(null);
 		
 		imagemForca = criaLabelImagem();
-		jogo.add(imagemForca);
+		telaJogo.add(imagemForca);
 		
-		//TERMINAR DE ADICIONAR OS TEXT FIELDS E MONTAR A TELA FORCA
+		//TODO TERMINAR DE ADICIONAR OS TEXT FIELDS E MONTAR A TELA FORCA
 		
 
 		
@@ -66,6 +66,10 @@ public class JogoT {
 		return panel;
 	}
 
-	//Adicionar lógica de conferência de letra a letra
+	public JPanel criaTela() {
+		return telaJogo;
+	}
+
+	// TODO Adicionar lógica de conferência de letra a letra
 	
 }

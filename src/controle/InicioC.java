@@ -1,8 +1,11 @@
 package controle;
 
+import java.util.Date;
+
 import javax.swing.JPanel;
 
 import main.Forca;
+import modelo.Usuario;
 import tela.InicioT;
 
 public class InicioC {
@@ -30,8 +33,15 @@ public class InicioC {
 	}
 
 	public void iniciarSemCadastro() {
-		// TODO Auto-generated method stub
-
+		JPanel proxTela = forca.getCntJogo().configuraTela();
+		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
+		forca.getJanela().setContentPane(proxTela);
+		
+		Usuario randomUser = new Usuario();
+		randomUser.setCpf("99999999999");
+		randomUser.setDataDeNascimento(new Date());
+		randomUser.setNome("RandomUser");
+		forca.setUsuarioLogado(randomUser);
 	}
 
 	public void login() {
