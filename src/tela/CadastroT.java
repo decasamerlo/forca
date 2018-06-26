@@ -14,7 +14,7 @@ import controle.CadastroC;
 
 public class CadastroT {
 	private JPanel telaCadastro;
-	private JLabel boasVindas, labelNome, labelCPF, labelEmail, labelSenha, labelConfSenha;
+	private JLabel boasVindas, labelNome, labelCPF, labelSenha, labelConfSenha;
 	private JLabel erroSenhasDiferentes, erroUsuarioExiste;
 	private JButton cadastrar, voltar;
 	private JTextField nome, cpf, email, senha, confSenha;
@@ -94,10 +94,6 @@ public class CadastroT {
 		labelCPF.setBounds(50, 110, 100, 30);
 		telaCadastro.add(labelCPF);
 
-		labelEmail = new JLabel("E-mail: ");
-		labelEmail.setBounds(50, 160, 100, 30);
-		telaCadastro.add(labelEmail);
-
 		labelSenha = new JLabel("Senha: ");
 		labelSenha.setBounds(50, 210, 100, 30);
 		telaCadastro.add(labelSenha);
@@ -169,14 +165,6 @@ public class CadastroT {
 
 	public void setLabelCPF(JLabel labelCPF) {
 		this.labelCPF = labelCPF;
-	}
-
-	public JLabel getLabelEmail() {
-		return labelEmail;
-	}
-
-	public void setLabelEmail(JLabel labelEmail) {
-		this.labelEmail = labelEmail;
 	}
 
 	public JLabel getLabelSenha() {

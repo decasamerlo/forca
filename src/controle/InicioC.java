@@ -1,7 +1,5 @@
 package controle;
 
-import java.util.Date;
-
 import javax.swing.JPanel;
 
 import main.Forca;
@@ -37,7 +35,6 @@ public class InicioC {
 		
 		Usuario randomUser = new Usuario();
 		randomUser.setCpf("99999999999");
-		randomUser.setDataDeNascimento(new Date());
 		randomUser.setNome("RandomUser");
 		forca.setUsuarioLogado(randomUser);
 	}

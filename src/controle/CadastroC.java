@@ -36,7 +36,6 @@ public class CadastroC {
 		
 		String cpf = tela.getCpf().getText();
 		String nome = tela.getNome().getText();
-		String email = tela.getEmail().getText();
 		String senha = tela.getSenha().getText();
 		String confSenha = tela.getConfSenha().getText();
 		
@@ -50,7 +49,6 @@ public class CadastroC {
 				usuario = new Usuario();
 				usuario.setNome(nome);
 				usuario.setCpf(cpf);
-//				usuario.setEmail(email);
 				usuario.setSenha(senha);
 				forca.getDao().salvar(usuario);
 				voltar();

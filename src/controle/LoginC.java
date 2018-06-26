@@ -27,7 +27,6 @@ public class LoginC {
 		// TODO buscar informações na tela, buscar informações no arquivo e setar no usuario
 		Usuario usuario = new Usuario();
 		usuario.setCpf(null);
-		usuario.setDataDeNascimento(null);
 		usuario.setNome(null);
 		usuario.setSenha(null);
 		forca.setUsuarioLogado(usuario);

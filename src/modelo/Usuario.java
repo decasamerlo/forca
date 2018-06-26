@@ -8,14 +8,12 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String nome;
-	private Date dataDeNascimento;
 	private String cpf;
 	private String senha;
 
-	public Usuario(String nome, Date dataDeNascimento, String cpf, String senha) {
+	public Usuario(String nome, String cpf, String senha) {
 		super();
 		this.nome = nome;
-		this.dataDeNascimento = dataDeNascimento;
 		this.cpf = cpf;
 		this.senha = senha;
 	}
@@ -29,14 +27,6 @@ public class Usuario implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Date getDataDeNascimento() {
-		return dataDeNascimento;
-	}
-
-	public void setDataDeNascimento(Date dataDeNascimento) {
-		this.dataDeNascimento = dataDeNascimento;
 	}
 
 	public String getCpf() {
