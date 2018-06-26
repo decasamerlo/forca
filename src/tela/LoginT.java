@@ -1,5 +1,8 @@
 package tela;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -56,9 +59,19 @@ public class LoginT {
 		// adicionando os botoes
 		logar = new JButton("Logar");
 		logar.setBounds(45, 150, 100, 30);
+		logar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntLogin.realizarLogin();
+			}
+		});
 
 		voltar = new JButton("Voltar");
 		voltar.setBounds(165, 150, 100, 30);
+		voltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntLogin.voltar();
+			}
+		});
 
 		panel.add(logar);
 		panel.add(voltar);

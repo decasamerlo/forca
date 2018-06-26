@@ -1,7 +1,5 @@
 package controle;
 
-import java.awt.Container;
-
 import javax.swing.JPanel;
 
 import main.Forca;
