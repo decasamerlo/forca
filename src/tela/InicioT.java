@@ -36,7 +36,7 @@ public class InicioT {
 	public JLabel criaLabel(){
 		JLabel label = new JLabel("Seja bem-vindo ao melhor jogo de forca!");
 		
-		label.setBounds(103, 10, 300, 20);
+		label.setBounds(130, 30, 300, 30);
 		
 		return label;
 	}
