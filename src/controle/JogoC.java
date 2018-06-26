@@ -1,5 +1,6 @@
 package controle;
 
+<<<<<<< HEAD
 import javax.swing.JPanel;
 
 import main.Forca;
@@ -21,5 +22,14 @@ public class JogoC {
 	public void sair() {
 		f.getJanela().dispose();
 	}
+=======
+import tela.JogoT;
+import main.Forca;
+
+public class JogoC {
+
+	private Forca f;
+	private JogoT tela;
+>>>>>>> refs/remotes/origin/master
 	
 }
