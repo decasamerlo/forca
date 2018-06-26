@@ -19,9 +19,36 @@ public class CadastroC {
 		return tela.criaTela();
 	}
 
+	private JPanel configuraTelaSenhasDiferentes() {
+		return tela.erroSenhasDiferentes();
+	}
+
 	public void cadastrarUsuario() {
-		// TODO buscar informações na tela e salvar
-		voltar();
+		
+		String cpf = tela.getCpf().getText();
+		String senha = tela.getSenha().getText();
+		String confSenha = tela.getConfSenha().getText();
+		
+		System.out.println("Senha: " + senha);
+		System.out.println("Conf: " + confSenha);
+		
+		if (senha != null) {
+			if (senha.equals(confSenha)) {
+				// TODO salvar usuario
+				voltar();
+			} else {
+				JPanel proxTela = configuraTelaSenhasDiferentes();
+				forca.getJanela().setContentPane(proxTela);
+			}
+		} else {
+			if (confSenha == null) {
+				//TODO salvar usuario
+				voltar();
+			} else {
+				JPanel proxTela = configuraTelaSenhasDiferentes();
+				forca.getJanela().setContentPane(proxTela);
+			}
+		}
 	}
 
 	public void voltar() {

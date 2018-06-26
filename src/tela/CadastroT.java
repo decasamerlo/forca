@@ -1,5 +1,7 @@
 package tela;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,6 +16,7 @@ import controle.CadastroC;
 public class CadastroT {
 	private JPanel telaCadastro;
 	private JLabel boasVindas, labelNome, labelCPF, labelEmail, labelSenha, labelConfSenha;
+	private JLabel erroSenhasDiferentes;
 	private JButton cadastrar, voltar;
 	private JTextField nome, cpf, email, senha, confSenha;
 	private JPanel panelBotoes;
@@ -21,6 +24,38 @@ public class CadastroT {
 
 	public CadastroT(CadastroC cadastroC) {
 		this.cntCadastro = cadastroC;
+	}
+
+	public JPanel criaBotoes() {
+		JPanel panel = new JPanel(null);
+
+		panel.setBounds(100, 60, 300, 300);
+
+		// adicionando os botoes
+		cadastrar = new JButton("Cadastre");
+		cadastrar.setBounds(45, 250, 100, 30);
+		cadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntCadastro.cadastrarUsuario();
+			}
+		});
+
+		voltar = new JButton("Voltar");
+		voltar.setBounds(165, 250, 100, 30);
+		voltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cntCadastro.voltar();
+			}
+		});
+
+		panel.add(cadastrar);
+		panel.add(voltar);
+
+		return panel;
+	}
+
+	public JPanel criaTela() {
+		
 		telaCadastro = new JPanel();
 		telaCadastro.setLayout(null);
 		telaCadastro.setSize(500, 400);
@@ -71,40 +106,21 @@ public class CadastroT {
 		labelConfSenha = new JLabel("Conf.Senha: ");
 		labelConfSenha.setBounds(50, 260, 100, 30);
 		telaCadastro.add(labelConfSenha);
+		
+		erroSenhasDiferentes = new JLabel("Senhas diferentes!");
+		erroSenhasDiferentes.setBounds(160, 240, 300, 20);
+		erroSenhasDiferentes.setForeground(Color.RED);
+		erroSenhasDiferentes.setVisible(false);
+		telaCadastro.add(erroSenhasDiferentes);
 
 		panelBotoes = criaBotoes();
 		telaCadastro.add(panelBotoes);
+		
+		return telaCadastro;
 	}
-
-	public JPanel criaBotoes() {
-		JPanel panel = new JPanel(null);
-
-		panel.setBounds(100, 60, 300, 300);
-
-		// adicionando os botoes
-		cadastrar = new JButton("Cadastre");
-		cadastrar.setBounds(45, 250, 100, 30);
-		cadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				cntCadastro.cadastrarUsuario();
-			}
-		});
-
-		voltar = new JButton("Voltar");
-		voltar.setBounds(165, 250, 100, 30);
-		voltar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				cntCadastro.voltar();
-			}
-		});
-
-		panel.add(cadastrar);
-		panel.add(voltar);
-
-		return panel;
-	}
-
-	public JPanel criaTela() {
+	
+	public JPanel erroSenhasDiferentes() {
+		erroSenhasDiferentes.setVisible(true);
 		return telaCadastro;
 	}
 
@@ -162,6 +178,14 @@ public class CadastroT {
 
 	public void setLabelConfSenha(JLabel labelConfSenha) {
 		this.labelConfSenha = labelConfSenha;
+	}
+
+	public JLabel getErroSenhasDiferentes() {
+		return erroSenhasDiferentes;
+	}
+
+	public void setErroSenhasDiferentes(JLabel erroSenhasDiferentes) {
+		this.erroSenhasDiferentes = erroSenhasDiferentes;
 	}
 
 	public JButton getCadastrar() {

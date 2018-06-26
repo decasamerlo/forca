@@ -1,8 +1,12 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Usuario {
+public class Usuario implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private String nome;
 	private Date dataDeNascimento;
 	private String cpf;
