@@ -22,7 +22,6 @@ public class LoginC {
 
 	public void realizarLogin() {
 		JPanel proxTela = forca.getCntJogo().configuraTela();
-		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
 		forca.getJanela().setContentPane(proxTela);
 		
 		// TODO buscar informações na tela e setar no usuario
@@ -36,7 +35,6 @@ public class LoginC {
 
 	public void voltar() {
 		JPanel proxTela = forca.getCntInicio().configuraTela();
-		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
 		forca.getJanela().setContentPane(proxTela);
 	}
 

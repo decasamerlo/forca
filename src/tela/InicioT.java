@@ -21,7 +21,9 @@ public class InicioT {
 	public InicioT(InicioC cntInicio) {
 		
 		this.cntInicio = cntInicio;
-		telaInicio = new JPanel(null);
+		telaInicio = new JPanel();
+		telaInicio.setLayout(null);
+		telaInicio.setSize(500, 400);
 		
 		bemvindo = criaLabel();
 		telaInicio.add(bemvindo);

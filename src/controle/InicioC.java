@@ -28,13 +28,11 @@ public class InicioC {
 
 	public void cadastrar() {
 		JPanel proxTela = forca.getCntCadastro().configuraTela();
-		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
 		forca.getJanela().setContentPane(proxTela);
 	}
 
 	public void iniciarSemCadastro() {
 		JPanel proxTela = forca.getCntJogo().configuraTela();
-		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
 		forca.getJanela().setContentPane(proxTela);
 		
 		Usuario randomUser = new Usuario();
@@ -46,7 +44,6 @@ public class InicioC {
 
 	public void login() {
 		JPanel proxTela = forca.getCntLogin().configuraTela();
-		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
 		forca.getJanela().setContentPane(proxTela);
 	}
 	

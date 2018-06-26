@@ -26,7 +26,6 @@ public class CadastroC {
 
 	public void voltar() {
 		JPanel proxTela = forca.getCntInicio().configuraTela();
-		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
 		forca.getJanela().setContentPane(proxTela);
 	}
 
