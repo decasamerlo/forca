@@ -1,7 +1,6 @@
 package tela;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,7 +15,7 @@ import controle.CadastroC;
 public class CadastroT {
 	private JPanel telaCadastro;
 	private JLabel boasVindas, labelNome, labelCPF, labelEmail, labelSenha, labelConfSenha;
-	private JLabel erroSenhasDiferentes;
+	private JLabel erroSenhasDiferentes, erroUsuarioExiste;
 	private JButton cadastrar, voltar;
 	private JTextField nome, cpf, email, senha, confSenha;
 	private JPanel panelBotoes;
@@ -107,6 +106,12 @@ public class CadastroT {
 		labelConfSenha.setBounds(50, 260, 100, 30);
 		telaCadastro.add(labelConfSenha);
 		
+		erroUsuarioExiste = new JLabel("ERRO: Já existe usuário com este CPF!");
+		erroUsuarioExiste.setBounds(160, 140, 300, 20);
+		erroUsuarioExiste.setForeground(Color.RED);
+		erroUsuarioExiste.setVisible(false);
+		telaCadastro.add(erroUsuarioExiste);
+		
 		erroSenhasDiferentes = new JLabel("ERRO: Senhas diferentes!");
 		erroSenhasDiferentes.setBounds(160, 240, 300, 20);
 		erroSenhasDiferentes.setForeground(Color.RED);
@@ -122,6 +127,16 @@ public class CadastroT {
 	public JPanel erroSenhasDiferentes() {
 		erroSenhasDiferentes.setVisible(true);
 		return telaCadastro;
+	}
+	
+	public JPanel erroUsuarioExiste() {
+		erroUsuarioExiste.setVisible(true);
+		return telaCadastro;
+	}
+	
+	public void removeErros() {
+		erroSenhasDiferentes.setVisible(false);
+		erroUsuarioExiste.setVisible(false);
 	}
 
 	public JPanel getTelaCadastro() {

@@ -3,6 +3,7 @@ package controle;
 import javax.swing.JPanel;
 
 import main.Forca;
+import modelo.Usuario;
 import tela.CadastroT;
 
 public class CadastroC {
@@ -22,28 +23,46 @@ public class CadastroC {
 	private JPanel configuraTelaSenhasDiferentes() {
 		return tela.erroSenhasDiferentes();
 	}
+	
+	private JPanel configuraTelaUsuarioExiste() {
+		return tela.erroUsuarioExiste();
+	}
+	
+	private void removeErros() {
+		tela.removeErros();
+	}
 
 	public void cadastrarUsuario() {
 		
 		String cpf = tela.getCpf().getText();
+		String nome = tela.getNome().getText();
+		String email = tela.getEmail().getText();
 		String senha = tela.getSenha().getText();
 		String confSenha = tela.getConfSenha().getText();
 		
-		System.out.println("Senha: " + senha);
-		System.out.println("Conf: " + confSenha);
-		
-		if (diferente(senha, confSenha)) {
+		if (!iguais(senha, confSenha)) {
 			JPanel proxTela = configuraTelaSenhasDiferentes();
 			forca.getJanela().setContentPane(proxTela);
 		} else {
-			// TODO salvar usuario
-			voltar();
+			removeErros();
+			Usuario usuario = forca.getDao().findOne(cpf);
+			if (usuario == null) {
+				usuario = new Usuario();
+				usuario.setNome(nome);
+				usuario.setCpf(cpf);
+//				usuario.setEmail(email);
+				usuario.setSenha(senha);
+				forca.getDao().salvar(usuario);
+				voltar();
+			} else {
+				JPanel proxTela = configuraTelaUsuarioExiste();
+				forca.getJanela().setContentPane(proxTela);
+			}
+			System.out.println(usuario.getNome());
 		}
-		
-		diferente(senha, confSenha);
 	}
 
-	private boolean diferente(String senha, String confSenha) {
+	private boolean iguais(String senha, String confSenha) {
 		if (senha != null) {
 			if (senha.equals(confSenha)) {
 				return true;

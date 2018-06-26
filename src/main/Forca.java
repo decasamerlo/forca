@@ -10,6 +10,7 @@ import modelo.Usuario;
 
 public class Forca {
 
+	private Dao dao;
 	private JFrame janela;
 	Usuario usuarioLogado;
 
@@ -27,6 +28,7 @@ public class Forca {
 		getJanela().setResizable(false);
 		getJanela().setVisible(true);
 
+		this.setDao(new Dao());
 		usuarioLogado = null;
 	}
 
@@ -44,6 +46,14 @@ public class Forca {
 
 	public void setUsuarioLogado(Usuario randomUser) {
 		this.usuarioLogado = randomUser;
+	}
+
+	public Dao getDao() {
+		return dao;
+	}
+
+	public void setDao(Dao dao) {
+		this.dao = dao;
 	}
 
 	public InicioC getCntInicio() {
