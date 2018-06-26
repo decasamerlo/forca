@@ -23,7 +23,9 @@ public class JogoT {
 	public JogoT(JogoC cntJogo) {
 		
 		this.cntJogo = cntJogo;
-		telaJogo = new JPanel(null);
+		telaJogo = new JPanel();
+		telaJogo.setLayout(null);
+		telaJogo.setSize(500, 400);
 		
 		imagemForca = criaLabelImagem();
 		telaJogo.add(imagemForca);

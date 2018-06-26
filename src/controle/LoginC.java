@@ -24,7 +24,7 @@ public class LoginC {
 		JPanel proxTela = forca.getCntJogo().configuraTela();
 		forca.getJanela().setContentPane(proxTela);
 		
-		// TODO buscar informações na tela e setar no usuario
+		// TODO buscar informações na tela, buscar informações no arquivo e setar no usuario
 		Usuario usuario = new Usuario();
 		usuario.setCpf(null);
 		usuario.setDataDeNascimento(null);
