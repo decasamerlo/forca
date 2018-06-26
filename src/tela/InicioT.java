@@ -13,7 +13,7 @@ public class InicioT {
 	
 	InicioC cntInicio;
 	
-	private JPanel tela;
+	private JPanel telaInicio;
 	private JLabel bemvindo;
 	private JButton iniciar, iniciarCadastrado, cadastrar, sair;
 	private JPanel panelBotoes;
@@ -21,13 +21,13 @@ public class InicioT {
 	public InicioT(InicioC cntInicio) {
 		
 		this.cntInicio = cntInicio;
-		tela = new JPanel(null);
+		telaInicio = new JPanel(null);
 		
 		bemvindo = criaLabel();
-		tela.add(bemvindo);
+		telaInicio.add(bemvindo);
 		
 		panelBotoes = criaBotoes();
-		tela.add(panelBotoes);
+		telaInicio.add(panelBotoes);
 		
 	}
 	
@@ -45,11 +45,11 @@ public class InicioT {
 		panel.setBounds(100, 85, 300, 300);
 		
 		//adicionando botões
-		iniciarCadastrado = new JButton("Iniciar");
+		iniciarCadastrado = new JButton("Login");
 		iniciarCadastrado.setBounds(45, 20, 200, 30);
 		iniciarCadastrado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cntInicio.iniciarCadastrado();
+				cntInicio.login();
 			}
 		});
 		
@@ -57,7 +57,7 @@ public class InicioT {
 		iniciar.setBounds(45, 70, 200, 30);
 		iniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cntInicio.iniciar();
+				cntInicio.iniciarSemCadastro();
 			}
 		});
 		
@@ -87,7 +87,7 @@ public class InicioT {
 	}
 	
 	public JPanel criaTela() {
-		return tela;
+		return telaInicio;
 	}
 }
 

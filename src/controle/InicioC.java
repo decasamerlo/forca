@@ -26,17 +26,18 @@ public class InicioC {
 	public void cadastrar() {
 		JPanel proxTela = forca.getCntCadastro().configuraTela();
 		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
-		forca.getJanela().setContentPane(forca.getCntCadastro().configuraTela());
+		forca.getJanela().setContentPane(proxTela);
 	}
 
-	public void iniciar() {
+	public void iniciarSemCadastro() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	public void iniciarCadastrado() {
-		// TODO Auto-generated method stub
-		
+	public void login() {
+		JPanel proxTela = forca.getCntLogin().configuraTela();
+		forca.getJanela().setSize(proxTela.getWidth(), proxTela.getHeight());
+		forca.getJanela().setContentPane(proxTela);
 	}
 	
 }
