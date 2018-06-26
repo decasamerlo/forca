@@ -3,7 +3,6 @@ package main;
 import javax.swing.JFrame;
 
 import controle.InicioC;
-import controle.JogoC;
 import modelo.Usuario;
 import tela.LoginT;
 
@@ -13,7 +12,6 @@ public class Forca {
 	Usuario usuarioLogado;
 	
 	InicioC cntInicio = new InicioC(this);
-	JogoC cntJogo = new JogoC(this);
 	
 	public Forca() {
 		setJanela(new JFrame("O MELHOR JOGO DE FORCA"));
@@ -28,7 +26,7 @@ public class Forca {
 	}
 	
 	public void iniciarPrograma() {
-		getJanela().setContentPane(cntJogo.configuraTela());
+		getJanela().setContentPane(cntInicio.configuraTela());
 	}
 	
 	public void cadastrar() {
