@@ -36,6 +36,9 @@ public class LoginC {
 	public void voltar() {
 		JPanel proxTela = forca.getCntInicio().configuraTela();
 		forca.getJanela().setContentPane(proxTela);
+		
+		tela.getSenha().setText("");
+		tela.getCpf().setText("");
 	}
 
 }

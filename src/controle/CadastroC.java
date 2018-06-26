@@ -27,6 +27,12 @@ public class CadastroC {
 	public void voltar() {
 		JPanel proxTela = forca.getCntInicio().configuraTela();
 		forca.getJanela().setContentPane(proxTela);
+		
+		tela.getConfSenha().setText("");
+		tela.getSenha().setText("");
+		tela.getCpf().setText("");
+		tela.getEmail().setText("");
+		tela.getNome().setText("");
 	}
 
 }
