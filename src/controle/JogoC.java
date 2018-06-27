@@ -66,8 +66,8 @@ public class JogoC {
 			}
 			button.setBackground(Color.green);
 		} else {
+			// TODO implementar o número máximo de erros
 			erros++;
-			System.out.println(erros);
 			tela.setPanelForca(erros);
 			button.setBackground(Color.red);
 		}

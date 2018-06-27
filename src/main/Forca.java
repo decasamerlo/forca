@@ -73,8 +73,7 @@ public class Forca {
 	}
 	
 	public void iniciarPrograma() {
-//		getJanela().setContentPane(cntInicio.configuraTela());
-		getJanela().setContentPane(cntJogo.configuraTela());
+		getJanela().setContentPane(cntInicio.configuraTela());
 	}
 
 }

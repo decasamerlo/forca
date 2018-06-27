@@ -12,8 +12,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import modelo.PalavrasForca;
-
 import controle.JogoC;
 
 public class JogoT {
