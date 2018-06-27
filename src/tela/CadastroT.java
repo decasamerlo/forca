@@ -17,7 +17,7 @@ public class CadastroT {
 	private JLabel boasVindas, labelNome, labelCPF, labelSenha, labelConfSenha;
 	private JLabel erroSenhasDiferentes, erroUsuarioExiste;
 	private JButton cadastrar, voltar;
-	private JTextField nome, cpf, email, senha, confSenha;
+	private JTextField nome, cpf, senha, confSenha;
 	private JPanel panelBotoes;
 	private CadastroC cntCadastro;
 
@@ -28,7 +28,7 @@ public class CadastroT {
 	public JPanel criaBotoes() {
 		JPanel panel = new JPanel(null);
 
-		panel.setBounds(100, 60, 300, 300);
+		panel.setBounds(100, 10, 300, 300);
 
 		// adicionando os botoes
 		cadastrar = new JButton("Cadastre");
@@ -73,16 +73,12 @@ public class CadastroT {
 		cpf.setBounds(150, 110, 300, 30);
 		telaCadastro.add(cpf);
 
-		email = new JTextField();
-		email.setBounds(150, 160, 300, 30);
-		telaCadastro.add(email);
-
 		senha = new JPasswordField();
-		senha.setBounds(150, 210, 300, 30);
+		senha.setBounds(150, 160, 300, 30);
 		telaCadastro.add(senha);
 
 		confSenha = new JPasswordField();
-		confSenha.setBounds(150, 260, 300, 30);
+		confSenha.setBounds(150, 210, 300, 30);
 		telaCadastro.add(confSenha);
 
 		// labels de informacoes
@@ -95,11 +91,11 @@ public class CadastroT {
 		telaCadastro.add(labelCPF);
 
 		labelSenha = new JLabel("Senha: ");
-		labelSenha.setBounds(50, 210, 100, 30);
+		labelSenha.setBounds(50, 160, 100, 30);
 		telaCadastro.add(labelSenha);
 
 		labelConfSenha = new JLabel("Conf.Senha: ");
-		labelConfSenha.setBounds(50, 260, 100, 30);
+		labelConfSenha.setBounds(50, 210, 100, 30);
 		telaCadastro.add(labelConfSenha);
 		
 		erroUsuarioExiste = new JLabel("ERRO: Já existe usuário com este CPF!");
@@ -109,7 +105,7 @@ public class CadastroT {
 		telaCadastro.add(erroUsuarioExiste);
 		
 		erroSenhasDiferentes = new JLabel("ERRO: Senhas diferentes!");
-		erroSenhasDiferentes.setBounds(160, 240, 300, 20);
+		erroSenhasDiferentes.setBounds(160, 190, 300, 20);
 		erroSenhasDiferentes.setForeground(Color.RED);
 		erroSenhasDiferentes.setVisible(false);
 		telaCadastro.add(erroSenhasDiferentes);
@@ -221,14 +217,6 @@ public class CadastroT {
 
 	public void setCpf(JTextField cpf) {
 		this.cpf = cpf;
-	}
-
-	public JTextField getEmail() {
-		return email;
-	}
-
-	public void setEmail(JTextField email) {
-		this.email = email;
 	}
 
 	public JTextField getSenha() {

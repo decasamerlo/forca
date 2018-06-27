@@ -56,7 +56,6 @@ public class CadastroC {
 				JPanel proxTela = configuraTelaUsuarioExiste();
 				forca.getJanela().setContentPane(proxTela);
 			}
-			System.out.println(usuario.getNome());
 		}
 	}
 
@@ -83,7 +82,6 @@ public class CadastroC {
 		tela.getConfSenha().setText("");
 		tela.getSenha().setText("");
 		tela.getCpf().setText("");
-		tela.getEmail().setText("");
 		tela.getNome().setText("");
 	}
 
