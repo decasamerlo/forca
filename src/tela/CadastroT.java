@@ -28,7 +28,7 @@ public class CadastroT {
 	public JPanel criaBotoes() {
 		JPanel panel = new JPanel(null);
 
-		panel.setBounds(100, 10, 300, 300);
+		panel.setBounds(100, 60, 300, 300);
 
 		// adicionando os botoes
 		cadastrar = new JButton("Cadastre");
@@ -61,51 +61,51 @@ public class CadastroT {
 
 		// boas vindas
 		boasVindas = new JLabel("Fa√ßa seu cadastro =)");
-		boasVindas.setBounds(180, 20, 300, 30);
+		boasVindas.setBounds(180, 30, 300, 30);
 		telaCadastro.add(boasVindas);
 
 		// campo de entrada de informacoes
 		nome = new JTextField();
-		nome.setBounds(150, 60, 300, 30);
+		nome.setBounds(150, 100, 300, 30);
 		telaCadastro.add(nome);
 
 		cpf = new JTextField();
-		cpf.setBounds(150, 110, 300, 30);
+		cpf.setBounds(150, 150, 300, 30);
 		telaCadastro.add(cpf);
 
 		senha = new JPasswordField();
-		senha.setBounds(150, 160, 300, 30);
+		senha.setBounds(150, 200, 300, 30);
 		telaCadastro.add(senha);
 
 		confSenha = new JPasswordField();
-		confSenha.setBounds(150, 210, 300, 30);
+		confSenha.setBounds(150, 250, 300, 30);
 		telaCadastro.add(confSenha);
 
 		// labels de informacoes
 		labelNome = new JLabel("Nome: ");
-		labelNome.setBounds(50, 60, 100, 30);
+		labelNome.setBounds(50, 100, 100, 30);
 		telaCadastro.add(labelNome);
 
 		labelCPF = new JLabel("CPF: ");
-		labelCPF.setBounds(50, 110, 100, 30);
+		labelCPF.setBounds(50, 150, 100, 30);
 		telaCadastro.add(labelCPF);
 
 		labelSenha = new JLabel("Senha: ");
-		labelSenha.setBounds(50, 160, 100, 30);
+		labelSenha.setBounds(50, 200, 100, 30);
 		telaCadastro.add(labelSenha);
 
 		labelConfSenha = new JLabel("Conf.Senha: ");
-		labelConfSenha.setBounds(50, 210, 100, 30);
+		labelConfSenha.setBounds(50, 250, 100, 30);
 		telaCadastro.add(labelConfSenha);
 		
 		erroUsuarioExiste = new JLabel("ERRO: J· existe usu·rio com este CPF!");
-		erroUsuarioExiste.setBounds(160, 140, 300, 20);
+		erroUsuarioExiste.setBounds(160, 180, 300, 20);
 		erroUsuarioExiste.setForeground(Color.RED);
 		erroUsuarioExiste.setVisible(false);
 		telaCadastro.add(erroUsuarioExiste);
 		
 		erroSenhasDiferentes = new JLabel("ERRO: Senhas diferentes!");
-		erroSenhasDiferentes.setBounds(160, 190, 300, 20);
+		erroSenhasDiferentes.setBounds(160, 230, 300, 20);
 		erroSenhasDiferentes.setForeground(Color.RED);
 		erroSenhasDiferentes.setVisible(false);
 		telaCadastro.add(erroSenhasDiferentes);

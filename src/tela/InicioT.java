@@ -14,7 +14,7 @@ public class InicioT {
 	InicioC cntInicio;
 	
 	private JPanel telaInicio;
-	private JLabel bemvindo;
+	private JLabel bemVindo;
 	private JButton iniciar, iniciarCadastrado, cadastrar, sair;
 	private JPanel panelBotoes;
 	
@@ -25,26 +25,19 @@ public class InicioT {
 		telaInicio.setLayout(null);
 		telaInicio.setSize(500, 400);
 		
-		bemvindo = criaLabel();
-		telaInicio.add(bemvindo);
+		bemVindo = new JLabel("Seja bem-vindo ao melhor jogo de forca!");
+		bemVindo.setBounds(130, 30, 300, 30);
+		telaInicio.add(bemVindo);
 		
 		panelBotoes = criaBotoes();
 		telaInicio.add(panelBotoes);
 		
 	}
 	
-	public JLabel criaLabel(){
-		JLabel label = new JLabel("Seja bem-vindo ao melhor jogo de forca!");
-		
-		label.setBounds(130, 30, 300, 30);
-		
-		return label;
-	}
-	
 	public JPanel criaBotoes(){
 		JPanel panel = new JPanel(null);
 		
-		panel.setBounds(100, 85, 300, 300);
+		panel.setBounds(100, 80, 300, 300);
 		
 		//adicionando botões
 		iniciarCadastrado = new JButton("Login");
@@ -109,11 +102,11 @@ public class InicioT {
 	}
 
 	public JLabel getBemvindo() {
-		return bemvindo;
+		return bemVindo;
 	}
 
 	public void setBemvindo(JLabel bemvindo) {
-		this.bemvindo = bemvindo;
+		this.bemVindo = bemvindo;
 	}
 
 	public JButton getIniciar() {
