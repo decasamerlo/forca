@@ -1,5 +1,6 @@
 package tela;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,6 +16,7 @@ public class LoginT {
 
 	private JPanel telaLogin;
 	private JLabel labelLogin, labelSenha;
+	private JLabel erroUsuarioErrado, erroSenhaErrada;
 	private JButton logar, voltar;
 	private JTextField cpf, senha;
 	private JPanel panelBotoes;
@@ -22,33 +24,6 @@ public class LoginT {
 
 	public LoginT(LoginC loginC) {
 		this.cntLogin = loginC;
-		telaLogin = new JPanel();
-		telaLogin.setLayout(null);
-		telaLogin.setSize(500, 400);
-
-		// campo de texto
-		cpf = new JTextField();
-		cpf.setBounds(250, 90, 150, 30);
-		telaLogin.add(cpf);
-
-		// campo de senha
-		senha = new JPasswordField();
-		senha.setBounds(250, 140, 150, 30);
-		telaLogin.add(senha);
-
-		// login com cpf
-		labelLogin = new JLabel("Digite seu CPF: ");
-		labelLogin.setBounds(100, 90, 150, 30);
-		telaLogin.add(labelLogin);
-
-		// login com senha
-		labelSenha = new JLabel("Digite sua Senha: ");
-		labelSenha.setBounds(100, 140, 150, 30);
-		telaLogin.add(labelSenha);
-
-		// painel dos botoes
-		panelBotoes = criaBotoes();
-		telaLogin.add(panelBotoes);
 	}
 
 	public JPanel criaBotoes() {
@@ -80,7 +55,62 @@ public class LoginT {
 	}
 
 	public JPanel criaTela() {
+		telaLogin = new JPanel();
+		telaLogin.setLayout(null);
+		telaLogin.setSize(500, 400);
+
+		// campo de texto
+		cpf = new JTextField();
+		cpf.setBounds(250, 100, 150, 30);
+		telaLogin.add(cpf);
+
+		// campo de senha
+		senha = new JPasswordField();
+		senha.setBounds(250, 150, 150, 30);
+		telaLogin.add(senha);
+
+		// login com cpf
+		labelLogin = new JLabel("Digite seu CPF: ");
+		labelLogin.setBounds(100, 100, 150, 30);
+		telaLogin.add(labelLogin);
+
+		// login com senha
+		labelSenha = new JLabel("Digite sua Senha: ");
+		labelSenha.setBounds(100, 150, 150, 30);
+		telaLogin.add(labelSenha);
+		
+		erroUsuarioErrado = new JLabel("ERRO: Usuário não encontrado!");
+		erroUsuarioErrado.setBounds(260, 130, 300, 20);
+		erroUsuarioErrado.setForeground(Color.RED);
+		erroUsuarioErrado.setVisible(false);
+		telaLogin.add(erroUsuarioErrado);
+		
+		erroSenhaErrada = new JLabel("ERRO: Senha incorreta!");
+		erroSenhaErrada.setBounds(260, 180, 300, 20);
+		erroSenhaErrada.setForeground(Color.RED);
+		erroSenhaErrada.setVisible(false);
+		telaLogin.add(erroSenhaErrada);
+
+		// painel dos botoes
+		panelBotoes = criaBotoes();
+		telaLogin.add(panelBotoes);
+		
 		return telaLogin;
+	}
+	
+	public JPanel erroUsuarioErrado() {
+		erroUsuarioErrado.setVisible(true);
+		return telaLogin;
+	}
+	
+	public JPanel erroSenhaErrada() {
+		erroSenhaErrada.setVisible(true);
+		return telaLogin;
+	}
+	
+	public void removeErros() {
+		erroUsuarioErrado.setVisible(false);
+		erroSenhaErrada.setVisible(false);
 	}
 
 	public JPanel getTelaLogin() {
@@ -105,6 +135,22 @@ public class LoginT {
 
 	public void setLabelSenha(JLabel labelSenha) {
 		this.labelSenha = labelSenha;
+	}
+
+	public JLabel getUsuarioErrado() {
+		return erroUsuarioErrado;
+	}
+
+	public void setUsuarioErrado(JLabel usuarioErrado) {
+		this.erroUsuarioErrado = usuarioErrado;
+	}
+
+	public JLabel getSenhaErrada() {
+		return erroSenhaErrada;
+	}
+
+	public void setSenhaErrada(JLabel senhaErrada) {
+		this.erroSenhaErrada = senhaErrada;
 	}
 
 	public JButton getLogar() {

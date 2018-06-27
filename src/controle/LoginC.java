@@ -19,17 +19,40 @@ public class LoginC {
 	public JPanel configuraTela() {
 		return tela.criaTela();
 	}
+	
+	private JPanel configuraTelaUsuarioErrado() {
+		return tela.erroUsuarioErrado();
+	}
+	
+	private JPanel configuraTelaSenhaErrada() {
+		return tela.erroSenhaErrada();
+	}
+	
+	private void removeErros() {
+		tela.removeErros();
+	}
 
 	public void realizarLogin() {
-		JPanel proxTela = forca.getCntJogo().configuraTela();
-		forca.getJanela().setContentPane(proxTela);
+		removeErros();
+
+		String cpf = tela.getCpf().getText();
+		String senha = tela.getSenha().getText();
 		
-		// TODO buscar informações na tela, buscar informações no arquivo e setar no usuario
-		Usuario usuario = new Usuario();
-		usuario.setCpf(null);
-		usuario.setNome(null);
-		usuario.setSenha(null);
-		forca.setUsuarioLogado(usuario);
+		Usuario usuario = forca.getDao().findOne(cpf);
+		
+		if (usuario == null) {
+			JPanel proxTela = configuraTelaUsuarioErrado();
+			forca.getJanela().setContentPane(proxTela);
+		} else {
+			if (!iguais(senha, usuario.getSenha())) {
+				JPanel proxTela = configuraTelaSenhaErrada();
+				forca.getJanela().setContentPane(proxTela);
+			} else {
+				JPanel proxTela = forca.getCntJogo().configuraTela();
+				forca.getJanela().setContentPane(proxTela);
+				forca.setUsuarioLogado(usuario);
+			}
+		}
 	}
 
 	public void voltar() {
@@ -40,4 +63,19 @@ public class LoginC {
 		tela.getCpf().setText("");
 	}
 
+	private boolean iguais(String senha, String confSenha) {
+		if (senha != null) {
+			if (senha.equals(confSenha)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			if (confSenha == null) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
 }
