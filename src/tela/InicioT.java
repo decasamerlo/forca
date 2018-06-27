@@ -19,19 +19,7 @@ public class InicioT {
 	private JPanel panelBotoes;
 	
 	public InicioT(InicioC cntInicio) {
-		
 		this.cntInicio = cntInicio;
-		telaInicio = new JPanel();
-		telaInicio.setLayout(null);
-		telaInicio.setSize(500, 400);
-		
-		bemVindo = new JLabel("Seja bem-vindo ao melhor jogo de forca!");
-		bemVindo.setBounds(130, 30, 300, 30);
-		telaInicio.add(bemVindo);
-		
-		panelBotoes = criaBotoes();
-		telaInicio.add(panelBotoes);
-		
 	}
 	
 	public JPanel criaBotoes(){
@@ -82,6 +70,17 @@ public class InicioT {
 	}
 	
 	public JPanel criaTela() {
+		telaInicio = new JPanel();
+		telaInicio.setLayout(null);
+		telaInicio.setSize(500, 400);
+		
+		bemVindo = new JLabel("Seja bem-vindo ao melhor jogo de forca!");
+		bemVindo.setBounds(130, 30, 300, 30);
+		telaInicio.add(bemVindo);
+		
+		panelBotoes = criaBotoes();
+		telaInicio.add(panelBotoes);
+		
 		return telaInicio;
 	}
 

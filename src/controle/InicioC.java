@@ -7,19 +7,21 @@ import modelo.Usuario;
 import tela.InicioT;
 
 public class InicioC {
-	
+
 	private Forca forca;
 	private InicioT tela;
-	
+
 	public InicioC(Forca f) {
 		this.forca = f;
 		tela = new InicioT(this);
 	}
-	
+
 	public JPanel configuraTela() {
-		return tela.criaTela();
+		JPanel t = tela.criaTela();
+		forca.getJanela().setSize(t.getSize());
+		return t;
 	}
-	
+
 	public void sair() {
 		forca.getJanela().dispose();
 	}
@@ -32,7 +34,7 @@ public class InicioC {
 	public void iniciarSemCadastro() {
 		JPanel proxTela = forca.getCntJogo().configuraTela();
 		forca.getJanela().setContentPane(proxTela);
-		
+
 		Usuario randomUser = new Usuario();
 		randomUser.setCpf("99999999999");
 		randomUser.setNome("RandomUser");
@@ -40,8 +42,13 @@ public class InicioC {
 	}
 
 	public void login() {
-		JPanel proxTela = forca.getCntLogin().configuraTela();
-		forca.getJanela().setContentPane(proxTela);
+		if (forca.getUsuarioLogado() == null) {
+			JPanel proxTela = forca.getCntLogin().configuraTela();
+			forca.getJanela().setContentPane(proxTela);
+		} else {
+			JPanel proxTela = forca.getCntJogo().configuraTela();
+			forca.getJanela().setContentPane(proxTela);
+		}
 	}
-	
+
 }

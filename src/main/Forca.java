@@ -12,7 +12,7 @@ public class Forca {
 
 	private Dao dao;
 	private JFrame janela;
-	Usuario usuarioLogado;
+	private Usuario usuarioLogado;
 
 	private InicioC cntInicio = new InicioC(this);
 	private CadastroC cntCadastro = new CadastroC(this);
@@ -73,7 +73,8 @@ public class Forca {
 	}
 	
 	public void iniciarPrograma() {
-		getJanela().setContentPane(cntInicio.configuraTela());
+//		getJanela().setContentPane(cntInicio.configuraTela());
+		getJanela().setContentPane(cntJogo.configuraTela());
 	}
 
 }
