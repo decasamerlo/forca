@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 
 import main.Forca;
 import modelo.PalavrasForca;
+import modelo.Usuario;
 
 public class JogoC {
 
@@ -19,6 +20,7 @@ public class JogoC {
 	private JogoT tela;
 	private PalavrasForca palavrasForca;
 	private String palavra;
+	private Usuario usuario;
 	private int acertos;
 	private int erros;
 	private int dicasPedidas, pontos; 
@@ -74,6 +76,8 @@ public class JogoC {
 						//zerando a imagem
 						tela.setPanelForca(0);
 						erros = 0;
+						acertos = 0;
+						dicasPedidas = 4;
 						
 						//Continuar no jogo ou sair do jogo
 						int resposta = JOptionPane.showConfirmDialog(null, "Parabéns você fez "+pontos+" pontos! " +
@@ -103,9 +107,10 @@ public class JogoC {
 				
 				//zerando a imagem
 				erros = 0;
+				acertos = 0;
 				pontos = 0;
 				tela.setPanelForca(0);
-				
+				dicasPedidas = 4;
 				
 				//Continuar jogando ou sair do jogo
 				int resposta = JOptionPane.showConfirmDialog(null, "Você foi enforcado! Deseja jogar novamente?", 
