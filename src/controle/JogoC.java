@@ -88,6 +88,8 @@ public class JogoC {
 						//Continuar no jogo ou sair do jogo
 						int resposta = JOptionPane.showConfirmDialog(null, "Parabéns você fez "+pontos+" pontos! O somátório pessoal do "+usu.getNome().toUpperCase()+" é: "+usu.getPontos()+
 								". Deseja jogar novamente?", "É Hexa!", JOptionPane.CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);						
+						
+						
 						JPanel proxTela;
 						if (resposta == JOptionPane.OK_OPTION)
 						{

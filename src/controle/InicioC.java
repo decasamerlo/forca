@@ -39,6 +39,8 @@ public class InicioC {
 		randomUser.setCpf("99999999999");
 		randomUser.setNome("RandomUser");
 		forca.setUsuarioLogado(randomUser);
+		randomUser.setPontos(0);
+		forca.getDao().salvar(randomUser);
 	}
 
 	public void login() {

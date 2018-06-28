@@ -253,11 +253,6 @@ public class JogoT {
 		tecla = new JButton("M");
 		panel.add(tecla);
 		
-		/*28
-		usu = f.getDao().findOne(f.getUsuarioLogado().getCpf());
-		recorde = new JTextField(usu.getPontos());
-		panel.add(recorde);
-		*/
 		Component[] componentes = panel.getComponents();
 		for (int i = 0; i < componentes.length; i++) {
 			if (i <= 9) {
