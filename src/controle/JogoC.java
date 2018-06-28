@@ -1,6 +1,7 @@
 package controle;
 
 import sun.awt.image.SurfaceManager.ProxiedGraphicsConfig;
+
 import main.Dao;
 
 import tela.JogoT;
@@ -25,6 +26,7 @@ public class JogoC {
 	private Usuario usuario;
 	private int acertos;
 	private int erros;
+
 	private int dicasPedidas, pontos;
 
 
@@ -63,6 +65,7 @@ public class JogoC {
 	public void desistir() {
 		JPanel proxTela = forca.getCntInicio().configuraTela();
 		forca.getJanela().setContentPane(proxTela);
+		forca.setUsuarioLogado(null);
 	}
 	
 	public void teclaApertada(JButton button) {
@@ -74,6 +77,7 @@ public class JogoC {
 					if (acertos == palavra.length()) {
 						// TODO ganhou			
 						pontos = (2*acertos*dicasPedidas) - erros;
+
 						Usuario usu = forca.getDao().findOne(forca.getUsuarioLogado().getCpf());
 						
 						usu.setPontos(usu.getPontos()+pontos);
@@ -86,10 +90,10 @@ public class JogoC {
 						dicasPedidas = 4;
 						
 						//Continuar no jogo ou sair do jogo
+
 						int resposta = JOptionPane.showConfirmDialog(null, "Parabéns você fez "+pontos+" pontos! O somátório pessoal do "+usu.getNome().toUpperCase()+" é: "+usu.getPontos()+
 								". Deseja jogar novamente?", "É Hexa!", JOptionPane.CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);						
-						
-						
+					
 						JPanel proxTela;
 						if (resposta == JOptionPane.OK_OPTION)
 						{
@@ -98,6 +102,7 @@ public class JogoC {
 						}else{
 							proxTela = forca.getCntInicio().configuraTela();
 							forca.getJanela().setContentPane(proxTela);
+							forca.setUsuarioLogado(null);
 						}
 
 						
@@ -106,7 +111,6 @@ public class JogoC {
 			}
 			button.setBackground(Color.green);
 		} else {
-			// TODO implementar o n�mero m�ximo de erros
 			erros++;
 			tela.setPanelForca(erros);
 			button.setBackground(Color.red);
@@ -131,6 +135,7 @@ public class JogoC {
 				}else{
 					proxTela = forca.getCntInicio().configuraTela();
 					forca.getJanela().setContentPane(proxTela);
+					forca.setUsuarioLogado(null);
 				}
 				
 

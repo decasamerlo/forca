@@ -14,8 +14,6 @@ import javax.swing.JTextField;
 
 import controle.JogoC;
 
-import main.Forca;
-import modelo.Usuario;
 
 public class JogoT {
 
@@ -24,11 +22,10 @@ public class JogoT {
 	private JLabel labelIcon, labelPalavra, labelDicas, labelDica1, labelDica2, labelDica3;
 	private JButton buttonDica, buttonDesistir;
 	private JTextField[] letras;
-	private JLabel recorde;
-	private ImageIcon icon;
 	
-	private Usuario usu;
-	private Forca f;
+	private ImageIcon icon;
+
+	
 	
 	public JogoT(JogoC cntJogo) {
 		this.cntJogo = cntJogo;
