@@ -9,15 +9,18 @@ public class Usuario implements Serializable {
 	private String nome;
 	private String cpf;
 	private String senha;
+	private int pontos;
 
-	public Usuario(String nome, String cpf, String senha) {
+	public Usuario(String nome, String cpf, String senha, int pontos) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.senha = senha;
+		this.pontos = pontos;
 	}
 
 	public Usuario() {
+		this.pontos=0;
 	}
 
 	public String getNome() {
@@ -43,4 +46,17 @@ public class Usuario implements Serializable {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public int getPontos() {
+		return pontos;
+	}
+
+	public void setPontos(int pontos) {
+		this.pontos = pontos;
+	}
+
+	
+
 }
+
+
