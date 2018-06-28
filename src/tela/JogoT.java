@@ -78,7 +78,7 @@ public class JogoT {
 		panel.setBounds(260, 10, 420, 80);
 		panel.setBackground(Color.yellow);
 		
-		labelPalavra = new JLabel("A sua Palavra é: ");
+		labelPalavra = new JLabel("A sua Palavra ï¿½: ");
 		labelPalavra.setBounds(10, 10, 420, 10);
 		panel.add(labelPalavra);
 		
@@ -136,7 +136,7 @@ public class JogoT {
 		buttonDica = new JButton("Dica");
 		buttonDica.setBounds(110, 10, 100, 30);
 		buttonDica.addActionListener(new ActionListener() {
-			@Override
+
 			public void actionPerformed(ActionEvent arg0) {
 				cntJogo.pedirDica();
 			}
@@ -146,7 +146,8 @@ public class JogoT {
 		buttonDesistir = new JButton("Desistir");
 		buttonDesistir.setBounds(220, 10, 100, 30);
 		buttonDesistir.addActionListener(new ActionListener() {
-			@Override
+			
+			
 			public void actionPerformed(ActionEvent arg0) {
 				cntJogo.desistir();
 			}
@@ -221,7 +222,7 @@ public class JogoT {
 		tecla = new JButton("L");
 		panel.add(tecla);
 		
-		tecla = new JButton("Ç");
+		tecla = new JButton("ï¿½");
 		panel.add(tecla);
 		
 		tecla = new JButton("Z");
@@ -255,9 +256,9 @@ public class JogoT {
 				componentes[i].setBounds(130 + 60*(i-20), 135, 50, 50);
 			}
 			
-			JButton button = (JButton) componentes[i];
+			final JButton button = (JButton) componentes[i];
 			button.addActionListener(new ActionListener() {
-				@Override
+				
 				public void actionPerformed(ActionEvent arg0) {
 					cntJogo.teclaApertada(button);
 				}
